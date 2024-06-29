@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="grid">
+    <div class="col-12">
+      <h1>Departamentos</h1>
+    </div>
+    <div class="col-12 p-fluid">
+      <label>Nome</label>
+    <input type="text" pInputText type="text" />
+
+    </div>
+
+
+    <div class="col-12">
+      <button pButton type ="submit" label="Buscar">
+      </button>
+    </div>
+  </div>
+    <div class="grid">
+      <div class="col-12">
+        <p-table [value]="departamentos"  [paginator]="true" [rows]="5" [showCurrentPageReport]="true"
+         currentPageReportTemplate="Exibindo de {first} a {last} de {totalRecords} departamentos " >
+          <ng-template pTemplate="header">
+            <tr>
+              <th class="col-nome">Id</th>
+              <th class="col-nom">Nome</th>
+              <th class="col-acoes"></th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-departamento>
+            <tr>
+              <td class="col-id">{{departamento.id}}</td>
+              <td class="col-nom">{{departamento.nomeDepartamento}}</td>
+
+              <td class="col-acoes">
+                <a pButton icon="pi pi-pencil" pTooltip="Editar" tooltipPosition="top"></a>
+                <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top"></button>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+    <div class="col-12">
+      <a pButton label="Novo Departamento">
+
+      </a>
+    </div>
+</div>
+
