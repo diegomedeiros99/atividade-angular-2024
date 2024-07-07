@@ -4,6 +4,16 @@ body{
   font-family: 'Arial', 'Helvetica', 'sans-serif';
   color: black;
 }
+
+a{
+  color: #F59e0b;
+  text-decoration:none ;
+}
+a:hover, a:focus{
+  text-decoration: underline;
+  color: #755a2a;
+}
+
 label{
   font-weight: bold;
 }

@@ -8,12 +8,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DepartamentosPesquisaComponent } from './departamentos-pesquisa/departamentos-pesquisa.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { DepartamentoCadastroComponent } from './departamento-cadastro/departamento-cadastro.component';
+import { DropdownModule } from 'primeng/dropdown';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     DepartamentosPesquisaComponent,
-    NavbarComponent
+    NavbarComponent,
+    DepartamentoCadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +26,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     TableModule,
     ButtonModule,
     TooltipModule,
+    DropdownModule,
+    BrowserAnimationsModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
